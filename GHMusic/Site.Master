@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="GHMusic.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>GHMusic</title>
+    <link href="~/Static/CSS/Style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container">
+        <div class="header">
+            <div class="headerbar round">
+                <a href="Default.aspx">
+                    <img src="<%=ResolveUrl("~/Static/IMG/site_logo.png")%>" alt="Logo GHMusic" />
+                </a>
+            </div>
+            <div class="navbar round">
+                <div class="inner">
+                    <ul class="linklist navlinks">
+                        <li class="icon-home">GHF Forumoverzicht</li>
+                    </ul>
+                </div>
+                <% if (AuthUsername != null) { %>            
+                    <ul>
+                        <li><%= AuthUsername %></li>
+                    </ul>
+                <% } %>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
