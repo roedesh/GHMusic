@@ -44,7 +44,7 @@ namespace GHMusic.Admin
                 }
 
                 // Create the account
-                int intResult = fBal.Insert(parentForumID, tbForumName.Text);
+                int intResult = fBal.Insert(parentForumID, this.tbForumName.Text);
                 if (intResult > 0)
                 {
 

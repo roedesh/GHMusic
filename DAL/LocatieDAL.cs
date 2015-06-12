@@ -28,7 +28,7 @@ namespace DAL
         /// <summary>
         /// Create location
         /// </summary>
-        /// <param name="landID">Country ID</param>
+        /// <param name="countryID">Country ID</param>
         /// <param name="name">Name of location</param>
         /// <returns>A Datatable</returns>
         public int Insert(int countryID, string name)

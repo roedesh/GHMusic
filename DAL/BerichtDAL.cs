@@ -60,7 +60,7 @@ namespace DAL
         /// Update a post
         /// </summary>
         /// <param name="postID">Post to be updated</param>
-        /// <param name="topicID">TopicID</param>
+        /// <param name="forumID">TopicID</param>
         /// <param name="accountID">AccountID</param>
         /// <param name="body">The content of the post</param>
         /// <returns>An integer</returns>
@@ -237,8 +237,8 @@ namespace DAL
         /// <summary>
         /// Method for printing Oracle errors
         /// </summary>
-        /// <param name="ex"></param>
-        /// <returns></returns>
+        /// <param name="ex">Oracle exception</param>
+        /// <returns>Error string</returns>
         public string ErrorString(OracleException ex)
         {
             return "Code: " + ex.ErrorCode + "\n" + "Message: " + ex.Message;

@@ -38,7 +38,7 @@ namespace GHMusic
                 if (intResult > 0)
                 {
                     // Login
-                    DataTable t = aBAL.Load(tbUsername.Text, tbPassword.Text);
+                    DataTable t = aBAL.Load(this.tbUsername.Text, this.tbPassword.Text);
                     if (t.Rows.Count > 0)
                     {
                         this.Session["AuthID"] = t.Rows[0]["AccountID"].ToString();
@@ -65,7 +65,7 @@ namespace GHMusic
 
         protected void CheckUsername(object source, ServerValidateEventArgs args)
         {
-            int intResult = new AccountBAL().CheckUsername(tbUsername.Text);
+            int intResult = new AccountBAL().CheckUsername(this.tbUsername.Text);
             if (intResult > 0)
             {
                 args.IsValid = false;

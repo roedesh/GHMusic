@@ -75,7 +75,7 @@ namespace GHMusic.Topic
                 Debug.WriteLine(forumID);
 
                 // Create the account
-                int intResult = tBal.Insert(forumID, Convert.ToInt32(Session["AuthID"].ToString()), tbTopicTitle.Text);
+                int intResult = tBal.Insert(forumID, Convert.ToInt32(Session["AuthID"].ToString()), this.tbTopicTitle.Text);
 
                 Debug.WriteLine(intResult);
 

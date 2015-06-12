@@ -252,7 +252,7 @@ namespace DAL
         /// <summary>
         /// Method for printing Oracle errors
         /// </summary>
-        /// <param name="ex">The exception</param>
+        /// <param name="ex">Oracle exception</param>
         /// <returns>Error string</returns>
         public string ErrorString(OracleException ex)
         {

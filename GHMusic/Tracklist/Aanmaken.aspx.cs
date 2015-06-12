@@ -34,7 +34,7 @@ namespace GHMusic.Tracklist
                     Convert.ToInt32(this.ddArtistID.SelectedValue),
                     Convert.ToInt32(this.ddEventID.SelectedValue),
                     1,
-                    tbEventName.Text,
+                    this.tbEventName.Text,
                     this.dtpDate.SelectedDate
                 );
 

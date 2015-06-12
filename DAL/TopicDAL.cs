@@ -267,9 +267,10 @@ namespace DAL
         }
 
         /// <summary>
-        /// Load all tracklists
+        /// Method for printing Oracle exceptions
         /// </summary>
-        /// <returns>A DataTable</returns>
+        /// <param name="ex">Oracle exception</param>
+        /// <returns>Error string</returns>
         public string ErrorString(OracleException ex)
         {
             return "Code: " + ex.ErrorCode + "\n" + "Message: " + ex.Message;

@@ -160,8 +160,8 @@ namespace DAL
         /// <summary>
         /// Method for printing Oracle errors
         /// </summary>
-        /// <param name="ex"></param>
-        /// <returns></returns>
+        /// <param name="ex">Oracle exception</param>
+        /// <returns>Error string</returns>
         public string ErrorString(OracleException ex)
         {
             return "Code: " + ex.ErrorCode + "\n" + "Message: " + ex.Message;
