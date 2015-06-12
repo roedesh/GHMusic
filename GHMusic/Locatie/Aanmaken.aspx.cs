@@ -37,5 +37,10 @@ namespace GHMusic.Locatie
                 Response.Redirect("/Default.aspx", false);
             }
         }
+
+        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
+        }
     }
 }

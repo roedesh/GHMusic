@@ -8,6 +8,7 @@ namespace DAL
     using System.Collections.Generic;
     using System.Configuration;
     using System.Data;
+    using System.Diagnostics;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
@@ -243,7 +244,7 @@ namespace DAL
                     }
                     catch (OracleException ex)
                     {
-                        Console.WriteLine(this.ErrorString(ex));
+                        Debug.WriteLine(ErrorString(ex));
                         return 0;
                     }
                 }

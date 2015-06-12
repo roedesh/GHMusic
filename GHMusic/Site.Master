@@ -24,11 +24,22 @@
                         <li class="icon-home">GHF Forumoverzicht</li>
                     </ul>
                 </div>
+                <ul class="loggedInMenu">
                 <% if (AuthUsername != null) { %>            
-                    <ul>
-                        <li><%= AuthUsername %></li>
-                    </ul>
+                    
+                        <li>Ingelogd als <%= AuthUsername %></li>
+                        <li><a href="/Logout.aspx">Uitloggen</a></li>
+                        <li><a href="/Land/Aanmaken.aspx">Land aanmaken</a></li>
+                        <li><a href="/Locatie/Aanmaken.aspx">Locatie aanmaken</a></li>
+                        <li><a href="/Evenement/Aanmaken.aspx">Evenement aanmaken</a></li>
+                        <li><a href="/Tracklist/Aanmaken.aspx">Tracklist aanmaken</a></li>
+                        <li><a href="/Admin/Forum/CreateForum.aspx">Forum aanmaken</a></li>
+                    
                 <% } %>
+                <% else { %>
+                    <li><a href="/Login.aspx">Inloggen</a></li>
+                <% } %>
+                    </ul>
             </div>
         </div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
